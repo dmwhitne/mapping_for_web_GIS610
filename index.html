@@ -15,20 +15,21 @@
   format: new ol.format.GeoJSON(),
   url: 'nc_state.geojson',
   attributions: "NC Boundary: Neteler &amp; Mitasova 2008"
-});
-var vectorLayer = new ol.layer.Vector({
-  source: vectorSource
-});
-var imageExtent = [-84.4223856, 33.4882788, -75.0518788, 36.6207207];
-var rasterLayer = new ol.layer.Image({
+      });
+      var vectorLayer = new ol.layer.Vector({
+        source: vectorSource
+      });
+      var imageExtent = [-84.4223856, 33.4882788, -75.0518788, 36.6207207];
+      var rasterLayer = new ol.layer.Image({
       source: new ol.source.ImageStatic({
         url: 'elev_state_500m.png',
         crossOrigin: '',
         projection: 'CRS:84',
         imageExtent: imageExtent,
         attributions: "NC Elevation: Neteler &amp; Mitasova 2008"
-      })});
-        var map = new ol.Map({
+      })
+      });
+      var map = new ol.Map({
   layers: [
     new ol.layer.Tile({
       source: new ol.source.OSM()
